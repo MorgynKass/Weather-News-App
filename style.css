@@ -87,7 +87,7 @@ a {
   padding-bottom: 3rem;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 /* today wrapper */
 .today {
@@ -191,6 +191,7 @@ a {
   width: 45%;
   display: flex;
   flex-direction: column;
+  justify-content: fl;
 }
 
 .tips {
@@ -217,7 +218,7 @@ a {
 }
 
 .news {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   background-color: white;
   border-radius: 9%;
   color: rgb(52, 113, 198);
@@ -230,33 +231,15 @@ a {
   padding-bottom: 1rem;
 }
 
-.news-info {
-  margin: 1.5rem;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.news-info h2 {
-  padding-left: 1.5rem;
-  color: rgb(113, 157, 219);
-}
-
-.news-info img {
-  width: 6rem;
+.news img {
+  padding-top: 1rem;
+  width: 20rem;
   border-radius: 5%;
-}
-
-.news-div span {
-  margin: 1.5rem;
-}
-
-.news-div span a {
-  color: rgb(52, 113, 198);
-  font-size: 1.5rem;
 }
 
 /* footer */
 .footer {
+  margin-top: 2rem;
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
@@ -330,7 +313,11 @@ a {
   padding: 3rem;
 }
 
-.news-one {
+.news-one-two {
+  height: 100%;
+}
+
+.main-story {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,26 +325,25 @@ a {
   margin-bottom: 2rem;
   background-color: white;
   color: rgb(52, 113, 198);
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
-.news-one img {
+.main-story img {
   width: 80%;
   padding-bottom: 1rem;
 }
 
-.news-one h2 {
+.main-story h2 {
   width: 80%;
   padding-bottom: 1rem;
 }
 
-.news-one h3 {
+.main-story h3 {
   width: 80%;
   padding-bottom: 1rem;
 }
 
-.news-two {
-  height: 415px;
+.sub-stories {
   display: flex;
 }
 
@@ -368,30 +354,31 @@ a {
   padding-bottom: 1rem;
 }
 
-.news-div2 {
+.story {
+  width: 100%;
   padding: 1rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background-color: white;
   border-radius: 5%;
 }
 
-.news-img {
+.sub-stories img {
   width: 150px;
   height: 150px;
-  padding-top: 1rem;
+  object-fit: cover;
+  padding: 1rem 0rem;
 }
 
-.news-h2 {
-  margin: 2rem;
-  font-size: 1.4rem;
+.sub-stories h2 {
+  margin: 1rem;
+  font-size: 1.3rem;
 }
 
-.news-h3 {
-  margin: 2rem;
+.sub-stories h3 {
+  margin: 1rem;
   font-size: 1.1rem;
   color: rgb(52, 113, 198);
 }
@@ -402,7 +389,8 @@ a {
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 1025px) {
+  
   .news-h2 {
     font-size: 1.1rem;
     margin: 0rem;
