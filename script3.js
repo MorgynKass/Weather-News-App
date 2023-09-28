@@ -15,7 +15,7 @@ fetch(url)
     // console.log(mainStory);
 
     // variable that holds my div element "news-one"
-    const subStories = document.querySelector('.sub-stories');
+    const subStories = document.querySelector(".sub-stories");
 
     // variable that holds an array with all of my articles I can use in my project.
     let article = jsObject.articles;
@@ -52,25 +52,24 @@ fetch(url)
 
     // for loop that loops through my slicedArticle array and allows me to assing certain info to certain elements.
     for (let i = 0; i < slicedArticle.length; i++) {
+      let story = document.createElement("div");
+      story.classList = "story";
 
-      let story = document.createElement('div');
-      story.classList = 'story';
-
-      let subImg = document.createElement('img');
+      let subImg = document.createElement("img");
       subImg.src = slicedArticle[i].urlToImage;
       // console.log(slicedArticle[i].urlToImage);
 
-      let subH2 = document.createElement('h2');
-      let subLink = document.createElement('a');
+      let subH2 = document.createElement("h2");
+      let subLink = document.createElement("a");
       subLink.href = slicedArticle[i].url;
       subLink.textContent = slicedArticle[i].title;
       subH2.appendChild(subLink);
 
-      let subH3 = document.createElement('h3');
+      let subH3 = document.createElement("h3");
       subH3.textContent = slicedArticle[i].description;
 
       story.append(subImg, subH2, subH3);
-      
+
       subStories.appendChild(story);
-    };
+    }
   });
